@@ -1,4 +1,4 @@
-$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.RebootOk=$false # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
@@ -14,7 +14,7 @@ choco install notepadplusplus.install
 choco install logparser
 
 # Productivity
-choco install GoogleChrome
+# choco install GoogleChrome
 
 # Utilities
 choco install 7zip
@@ -24,14 +24,14 @@ choco install bginfo
 # Install-WindowsUpdate -AcceptEula
 
 # Taskbar items
-Install-ChocolateyPinnedTaskBarItem "$env:localappdata\Google\Chrome\Application\chrome.exe"
+# Install-ChocolateyPinnedTaskBarItem "$env:localappdata\Google\Chrome\Application\chrome.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:windir\explorer.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\console\console.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:programfiles\Notepad++\notepad++.exe"
 
 # VSIS Packages
-Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/112013/6/PowerShellTools.vsix
+# Install-ChocolateyVsixPackage PowerShellTools http://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597/file/112013/6/PowerShellTools.vsix
 
 # Filesystem
 New-Item -Path C:\ -Name Temp -ItemType Directory
